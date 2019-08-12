@@ -12,12 +12,14 @@
     <table>
         <tr>
             <th>Movie</th>
+            <th>Length</th>
             <th>Comments</th>
         </tr>
 
         {% for movie, length in movies.items() %}
             <tr>
                 <td>{{ movie }}</td>
+                <td>{{ length }}</td>
                 {% if length < 2 %}
                     <td style="color: green">short</td>
                 {% elif length >= 2 and length < 3 %}
